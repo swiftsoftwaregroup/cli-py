@@ -1,13 +1,8 @@
 import click
-import sys
 
 def read_name_from_file(file_path):
-    try:
-        with open(file_path, 'r') as file:
-            return file.read().strip()
-    except IOError:
-        click.echo(f"Error: Unable to read file '{file_path}'", err=True)
-        sys.exit(1)
+    with open(file_path, 'r', encoding='utf-8') as file:
+        return file.read().strip()
 
 def generate_greeting(name, language):
     greetings = {
@@ -23,7 +18,7 @@ def cli():
     pass
 
 @cli.command()
-@click.argument('file', type=click.Path(exists=True))
+@click.argument('file', type=click.Path(exists=True, readable=True))
 @click.option('-l', '--language', type=click.Choice(['en', 'es', 'bg']), default='en',
               help="Language for the greeting (en: English, es: Spanish, bg: Bulgarian)")
 def greet(file, language):

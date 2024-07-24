@@ -54,6 +54,12 @@ cli-py greet --language es name.txt
 cli-py greet -l bg name.txt
 ```
 
+### Test
+
+```bash
+pytest
+```
+
 ### How to create a new project
 
 ```bash
@@ -67,6 +73,9 @@ poetry init \
   
 # add `click` package
 poetry add click
+
+# add `dev` packages
+poetry add --dev pytest
 ```
 
 Create the following project structure:
