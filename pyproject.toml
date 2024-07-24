@@ -8,7 +8,6 @@ readme = "README.md"
 
 [tool.poetry.scripts]
 cli-py = "cli_py.main:cli"
-docs = "mkdocs serve"
 
 [tool.poetry.dependencies]
 python = "^3.12"
