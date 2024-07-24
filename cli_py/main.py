@@ -13,9 +13,6 @@ def read_name_from_file(file_path: str) -> str:
 
     Returns:
         str: The name read from the file, stripped of leading/trailing whitespace.
-
-    Raises:
-        click.FileError: If the file cannot be read.
     """
     with open(file_path, 'r', encoding='utf-8') as file:
         return file.read().strip()
