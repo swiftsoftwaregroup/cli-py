@@ -31,7 +31,7 @@ pip install --upgrade pip
 # install development and runtime packages
 pip install -r requirements-dev.txt
 
-# install package itself
+# install package itself (from pyproject.toml)
 pip install -e .
 
 popd > /dev/null
