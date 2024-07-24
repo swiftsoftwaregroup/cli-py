@@ -41,7 +41,6 @@ def generate_greeting(name: str, language: str) -> str:
 @click.group()
 def cli():
     """CLI tool for greeting users in different languages."""
-    pass
 
 @cli.command()
 @click.argument('file', type=click.Path(exists=True, readable=True))
