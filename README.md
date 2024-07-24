@@ -60,6 +60,19 @@ cli-py greet -l bg name.txt
 pytest
 ```
 
+### Docs
+
+```bash
+# build 
+mkdocs build
+
+# serve
+mkdocs serve
+
+# open docs in browser
+open http://127.0.0.1:8000
+```
+
 ### How to create a new project
 
 ```bash
@@ -76,6 +89,7 @@ poetry add click
 
 # add `dev` packages
 poetry add --dev pytest
+poetry add --dev mkdocs mkdocs-material mkdocstrings[python]
 ```
 
 Create the following project structure:
@@ -90,3 +104,8 @@ cli-py/
 └── LICENSE
 ```
 
+Init docs:
+
+```bash
+mkdocs new .
+```

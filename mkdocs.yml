@@ -1,0 +1,25 @@
+site_name: CLI-PY Documentation
+theme:
+  name: material
+
+nav:
+  - Home: index.md
+  - Usage: usage.md
+  - API Reference: api.md
+
+plugins:
+  - search
+  - mkdocstrings:
+      default_handler: python
+      handlers:
+        python:
+          rendering:
+            show_source: true
+            heading_level: 3
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
