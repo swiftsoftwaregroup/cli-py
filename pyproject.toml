@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "cli-py"
+version = "0.1.0"
+description = "CLI tool for greeting users in different languages"
+authors = ["vkantchev <vkantchev@users.noreply.github.com>"]
+license = "Apache-2.0"
+readme = "README.md"
+
+[tool.poetry.scripts]
+cli-py = "cli_py.main:cli"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+click = "^8.1.7"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
